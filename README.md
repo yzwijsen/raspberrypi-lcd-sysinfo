@@ -14,7 +14,7 @@ script that cycles between showing load average, memory usage and current ip add
 
 * Install **bw_tools** (see BitWizard wiki article [Here](http://www.bitwizard.nl/wiki/index.php/Beginners_guide_to_SPI_on_Raspberry_Pi) , under **installing the program** )
 
-* download the cript & make it executable
+* download the script & make it executable
 ```bash
 wget https://raw.githubusercontent.com/yzwijsen/raspberrypi-lcd-sysinfo/master/lcd-show-sysinfo.sh && chmod +x lcd-show-sysinfo.sh
 ```
