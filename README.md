@@ -6,17 +6,17 @@ script that cycles between showing load average, memory usage and current ip add
 <img src="http://i.imgur.com/wUUjmWW.jpg?1" alt="lcd_ip" width="200" height="150">
 
 ##What you need:
-* a raspberry pi (only tested with rev1 model B but should work on all models that are compatible with the LCD screen below)
+* a raspberry pi 
 * an lcd screen from BitWizard with SPI board ([this one](http://www.bitwizard.nl/shop/displays/lcd-interface-16x2))
-* an SD card with a linux distro installed (only tested with raspbian but should work on most distros)
+* SD card with Linux installed (preferably Raspbian but others should work)
 
 ##How To Use:
 
-* make sure spi is turned on and that bw_tools is installed and working (see BitWizard wiki article [Here](http://www.bitwizard.nl/wiki/index.php/Beginners_guide_to_SPI_on_Raspberry_Pi) , under **installing the program** )
+* Install **bw_tools** (see BitWizard wiki article [Here](http://www.bitwizard.nl/wiki/index.php/Beginners_guide_to_SPI_on_Raspberry_Pi) , under **installing the program** )
 
-* download the shell script & make it executable
+* download the cript & make it executable
 ```bash
-wget https://raw.githubusercontent.com/yzwijsen/raspberrypi-lcd-sysinfo/master/lcd-show-sysinfo.sh && chmod a+x lcd-show-sysinfo.sh
+wget https://raw.githubusercontent.com/yzwijsen/raspberrypi-lcd-sysinfo/master/lcd-show-sysinfo.sh && chmod +x lcd-show-sysinfo.sh
 ```
 
 * start the script
@@ -27,9 +27,9 @@ sudo ./lcd-show-sysinfo.sh &
 That's it! You should now see output on your lcd screen. (if not, open the script and make sure the ADDRESS variable is set correctly)
 
 
-**Run on startup**
+##Run on startup
 
-If you want you can set the script to start on boot. To do that:
+If you want you can set the script to start automatically on boot. The easiest way to do that is by setting up a cronjob:
 
 * open crontab
 ```bash
