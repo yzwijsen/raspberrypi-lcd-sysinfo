@@ -36,8 +36,8 @@ If you want you can set the script to start automatically on boot. The easiest w
 sudo crontab -e
 ```
 
-* add @reboot cronjob to start script automatically
+* add the following line:
 ```bash
 @reboot /home/pi/lcd-show-sysinfo.sh
 ```
-
+* save and close crontab
